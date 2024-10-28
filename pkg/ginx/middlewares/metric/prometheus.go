@@ -52,6 +52,7 @@ func (m *MiddlewareBuilder) Build() gin.HandlerFunc {
 			duration := time.Since(start)
 			gauge.Dec()
 			pattern := ctx.FullPath()
+			//防止404
 			if pattern == "" {
 				pattern = "unknown"
 			}
