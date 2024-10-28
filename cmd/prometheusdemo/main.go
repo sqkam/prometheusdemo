@@ -8,7 +8,7 @@ import (
 func initPrometheus() {
 	go func() {
 		http.Handle("/metrics", promhttp.Handler())
-		http.ListenAndServe(":8080", nil)
+		http.ListenAndServe(":8081", nil)
 	}()
 }
 
